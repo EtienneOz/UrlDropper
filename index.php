@@ -16,11 +16,13 @@
       echo '<div class="header">
         <h1><a href="'.$theTitle.'">'.$theTitle.'</a></h1>';
         ?>
-        <span class="title">All you need is links.</span></p>
+        <span class="title toggleInfos">All you need is links.</span></p>
     </div>
     <div class="content">
-      <button class="more">Need more informations?</button>
-      <button class="less">Need less information?</button>
+      <button class="moreInfos">Need more informations?</button>
+      <button class="lessInfos">Need less information?</button>
+      <button class="moreCredits">WTF?</button>
+      <button class="lessCredits">Don't care</button>
       <?php
         ///////////////////////////
         // Here goes your feeds: //
@@ -31,12 +33,14 @@
         echo "<ul class='liste'>";
 
         foreach($x->channel->item as $entry) {
-          echo "<li class='theUrl'><a href='$entry->link'>" . $entry->link . "</a>";
-          echo "<span class='toggle'><span class='title'> " . $entry->title . " </span>";
+          echo "<li class='theUrl'>";
+          echo "  <a href='$entry->link'>" . $entry->link . "</a>";
+          echo "  <span class='toggleInfos'>";
+          echo "    <span class='title'> " . $entry->title . " </span>";
           $categories = $entry->category;
              $nb = count($categories);
              for ($i=0; $i<$nb; $i++){
-               echo '<span class="toggle '.$entry->title.' categories">' .$categories[$i]. '</span>';
+               echo '<span class="'.$entry->title.' categories">' .$categories[$i]. '</span>';
              }
              echo "</li>";
          }
@@ -44,10 +48,13 @@
 
       ?>
     </div>
+    <!--————
+    Credits:
+    —————-->
     <div class="footer">
-      Build by <a href="http://github.com/EtienneOz">ÉtienneOz</a><br/>
+      Build by <a href="http://github.com/EtienneOz">ÉtienneOz</a>.<br/>
       Generated with my <a href="http://sebsauvage.net/wiki/doku.php?id=php:shaarli">Shaarli</a> feeds.<br/>
-      Under <a href="https://www.gnu.org/licenses/gpl.html">GNU/GPL v2</a> License.<br/>
+      Under <a href="https://www.gnu.org/licenses/gpl.html">GNU/GPLv3</a> License.<br/>
       <a href="https://github.com/EtienneOz/UrlDropper"> Fork it</a> !
     </div>
 	<script src="js/jquery.js"></script>
@@ -63,8 +70,9 @@
         less.hide();
         more.show();
       })
-    }
-    showtitle($('.more'), $('.less'), $('.toggle'));
+    };
+  showtitle($('.moreInfos'), $('.lessInfos'), $('.toggleInfos'));
+  showtitle($('.moreCredits'), $('.lessCredits'), $('.footer'));
   </script>
   </body>
 </html>

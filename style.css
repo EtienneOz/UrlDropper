@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+body{
+  font-family: monospace;
+  font-size: 1.2em;
+  line-height: 1.7em;
+  padding: 10px;
+}
+
+h1{
+}
+
+
+a{
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  color: black;
+  padding: 2px 4px;
+  margin: 1px;
+}
+
+a:hover{
+  border: 1px solid red;
+  padding: 2px 4px;
+  margin: 0;
+}
+
+li{
+     list-style: none;
+}
+
+li:before{
+  content: '⟶ ';
+  color: red;
+}
+
+.toggle{
+  display: none;
+}
+
+.title{
+  color: red;
+}
+
+.space{
+  padding-left: 1.5em;
+}
+
+.categories{
+  color: black;
+  border: 1px solid black;
+  padding: 2px 4px;
+  margin: 0;
+}
+
+.footer{
+  font-size: .8em;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+button.more{
+  position: fixed;
+  top: 10px;
+  right : 10px;
+  font-family: monospace;
+}

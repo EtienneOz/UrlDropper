@@ -8,8 +8,12 @@ body{
 }
 
 h1{
+  display: inline;
 }
 
+.header{
+  margin-bottom: 40px;
+}
 
 a{
   text-decoration: none;
@@ -53,16 +57,22 @@ li:before{
   margin: 0;
 }
 
+button{
+  position: fixed;
+  top: 10px;
+  right : 10px;
+  font-family: monospace;
+}
+
+button.less{
+  display: none;
+}
+
+
 .footer{
   font-size: .8em;
   position: fixed;
   bottom: 10px;
   right: 10px;
-}
-
-button.more{
-  position: fixed;
-  top: 10px;
-  right : 10px;
-  font-family: monospace;
+  text-align : right;
 }

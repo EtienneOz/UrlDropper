@@ -2,8 +2,8 @@
 
 body{
   font-family: monospace;
-  font-size: 1.2em;
-  line-height: 1.7em;
+  font-size: 1.1em;
+  line-height: 1.9em;
   padding: 10px;
 }
 
@@ -19,7 +19,7 @@ a{
   text-decoration: none;
   border-bottom: 1px solid black;
   color: black;
-  padding: 2px 4px;
+  padding: 1px 4px;
   margin: 1px;
 }
 
@@ -40,6 +40,10 @@ li:before{
 
 .toggleInfos{
   display: none;
+}
+
+sup{
+  font-size: 0.6em;
 }
 
 .title{
@@ -80,9 +84,13 @@ button.moreCredits, .lessCredits{
 
 .footer{
   font-size: .8em;
+  line-height: 1.9em;
   position: fixed;
   bottom: 10px;
   right: 10px;
+  border: 1px solid black;
+  padding: 8px;
+  background-color: white;
   text-align : right;
   display: none;
 }

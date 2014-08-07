@@ -20,9 +20,9 @@
     </div>
     <div class="content">
       <button class="moreInfos">Need more informations?</button>
-      <button class="lessInfos">Need less information?</button>
+      <button class="lessInfos">Don't care</button>
       <button class="moreCredits">WTF?</button>
-      <button class="lessCredits">Don't care</button>
+      <button class="lessCredits">Who care?</button>
       <?php
         ///////////////////////////
         // Here goes your feeds: //
@@ -36,14 +36,15 @@
           echo "<li class='theUrl'>";
           echo "  <a href='$entry->link'>" . $entry->link . "</a>";
           echo "  <span class='toggleInfos'>";
-          echo "    <span class='title'> " . $entry->title . " </span>";
+          echo "    <span class='title'>" . $entry->title . " </span>";
           $categories = $entry->category;
-             $nb = count($categories);
-             for ($i=0; $i<$nb; $i++){
-               echo '<span class="'.$entry->title.' categories">' .$categories[$i]. '</span>';
-             }
-             echo "</li>";
-         }
+            $nb = count($categories);
+            for ($i=0; $i<$nb; $i++){
+              echo '<span class="'.$entry->title.' categories">' .$categories[$i]. '</span>';
+            }
+          echo " <sup class='date'>[" . $entry->pubDate . "]</sup>";
+          echo "</li>";
+        }
         echo "</ul>";
 
       ?>
@@ -55,7 +56,7 @@
       Build by <a href="http://github.com/EtienneOz">ÉtienneOz</a>.<br/>
       Generated with my <a href="http://sebsauvage.net/wiki/doku.php?id=php:shaarli">Shaarli</a> feeds.<br/>
       Under <a href="https://www.gnu.org/licenses/gpl.html">GNU/GPLv3</a> License.<br/>
-      <a href="https://github.com/EtienneOz/UrlDropper"> Fork it</a> !
+      <a href="https://github.com/EtienneOz/UrlDropper"> Fork it</a>!
     </div>
 	<script src="js/jquery.js"></script>
   <script>

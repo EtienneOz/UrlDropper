@@ -1,8 +1,6 @@
 UrlDropper
 ==========
 
-All you need is links.
-
 
 Drop you favorite feeds on a simple url list.
 

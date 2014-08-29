@@ -24,3 +24,6 @@ by the title you want to give to it.
 ![ScreenShots](https://raw.githubusercontent.com/EtienneOz/UrlDropper/master/ScreenShots/UrlDropper_2.png)
 
 
+## License
+
+[GNU GPLv3](https://github.com/EtienneOz/UrlDropper/blob/master/LICENSE)

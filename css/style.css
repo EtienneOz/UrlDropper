@@ -16,26 +16,26 @@ header{
 }
 
 a{
-  text-decoration: none;
   border-bottom: 1px solid black;
   color: black;
-  padding: 1px 4px;
   margin: 1px;
+  padding: 1px 4px;
+  text-decoration: none;
 }
 
 a:hover{
   border: 1px solid red;
-  padding: 2px 4px;
   margin: 0;
+  padding: 2px 4px;
 }
 
 li{
-     list-style: none;
+  list-style: none;
 }
 
 li:before{
-  content: '⟶ ';
   color: red;
+  content: '⟶ ';
 }
 
 .toggleInfos{
@@ -55,42 +55,44 @@ sup{
 }
 
 .categories{
-  color: black;
   border: 1px solid black;
-  padding: 2px 4px;
+  color: black;
   margin: 0;
+  padding: 2px 4px;
 }
 
 button{
-  position: fixed;
-  font-family: monospace;
   cursor: pointer;
+  font-family: monospace;
+  position: fixed;
 }
 
-.moreInfos, .lessInfos{
-  top: 10px;
+.moreInfos,
+.lessInfos{
   right: 10px;
+  top: 10px;
 }
 
-button.moreCredits, .lessCredits{
+button.moreCredits,
+.lessCredits{
   bottom: 10px;
   left: 10px;
 }
 
-.lessInfos, .lessCredits{
+.lessInfos,
+.lessCredits{
   display: none;
 }
 
-
 .footer{
+  background-color: white;
+  border: 1px solid black;
+  bottom: 10px;
+  display: none;
   font-size: .8em;
   line-height: 1.9em;
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  border: 1px solid black;
   padding: 8px;
-  background-color: white;
+  position: fixed;
+  right: 10px;
   text-align : right;
-  display: none;
 }
